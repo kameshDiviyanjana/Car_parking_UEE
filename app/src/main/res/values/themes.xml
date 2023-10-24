@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Car_parking" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="custom_card_view_style_dashborde" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_card_view_dashbordes</item>
+    </style>
+    <style name="custom_card_view_dashbordes" parent="">
+
+        <item name="cornerFamily" >rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">348dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+
+
+    </style>
+    <style name="custom_card_view_style_cirle" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_card_view_style_cirles</item>
+    </style>
+    <style name="custom_card_view_style_cirles" parent="">
+
+        <item name="cornerFamily" >rounded</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+
+
+    </style>
+
+    <style name="custom_card_vive_camer" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_card_vive_camers</item>
+    </style>
+    <style name="custom_card_vive_camers" parent="">
+
+        <item name="cornerFamily" >rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">200dp</item>
+
+
+    </style>
+    <style name="custom_card_vive_home" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/custom_card_vive_homegs</item>
+    </style>
+    <style name="custom_card_vive_homegs" parent="">
+
+        <item name="cornerFamily" >rounded</item>
+        <item name="cornerSizeTopLeft">200dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+
+
+    </style>
+</resources>
