@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -52,7 +51,7 @@ class vehiclBokkin : AppCompatActivity() {
                 slot.text.clear()
                 Toast.makeText(this,"Add sucefull",Toast.LENGTH_LONG).show()
 
-              val ye =Intent(this,displayBooking::class.java)
+              val ye =Intent(this, displayBooking::class.java)
                 startActivity(ye)
 
             }.addOnFailureListener {

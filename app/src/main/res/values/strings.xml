@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">car_parking</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="app_name">HireMeNow</string>
+
     <string name="NAME">Name</string>
     <string name="EMAIL">E-mail</string>
     <string name="PHONE">Phone</string>

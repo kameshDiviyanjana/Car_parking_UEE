@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/SCREEN"
-    tools:context=".MainActivity5">
+    tools:context=".mainActivity5">
 
     <ImageView
         android:id="@+id/updateinterfaceimg"

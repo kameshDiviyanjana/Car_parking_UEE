@@ -1,17 +1,16 @@
-package com.example.hiremenow
+package com.example.car_parking
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity2 : AppCompatActivity() {
+class mainActivity2 : AppCompatActivity() {
     private lateinit var tvcusId:TextView
     private lateinit var tvNames:TextView
     private lateinit var tvEmail:TextView
@@ -49,7 +48,7 @@ class MainActivity2 : AppCompatActivity() {
 
         mTask.addOnSuccessListener {
             Toast.makeText(this ,"Your data deleted",Toast.LENGTH_LONG).show()
-            val intent = Intent(this,MainActivity13::class.java)
+            val intent = Intent(this, mainActivity13::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->

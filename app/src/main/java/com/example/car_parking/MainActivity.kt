@@ -1,4 +1,4 @@
-package com.example.hiremenow
+package com.example.car_parking
 
 import android.content.Intent
 import android.net.Uri
@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
-class MainActivity : AppCompatActivity() {
+class mainActivity : AppCompatActivity() {
 
 
     private lateinit var namecus:EditText

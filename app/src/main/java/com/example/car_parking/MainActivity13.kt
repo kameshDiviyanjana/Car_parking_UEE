@@ -1,22 +1,21 @@
-package com.example.hiremenow
+package com.example.car_parking
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 
-class MainActivity13 : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
+class mainActivity13 : AppCompatActivity() {
+   /* private lateinit var recyclerView: RecyclerView
     private lateinit var usersArrayList: ArrayList<Users>
     private lateinit var database:DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+       super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main13)
 
 
@@ -41,7 +40,7 @@ class MainActivity13 : AppCompatActivity() {
 
                     mAdaptor.setOnItemClickListener(object:MyAdapter.OnItemClickListener{
                         override fun onItemClick(position: Int) {
-                           val intent = Intent(this@MainActivity13,MainActivity2::class.java)
+                           val intent = Intent(this@mainActivity13,mainActivity2::class.java)
                             //put extras
                             intent.putExtra("customerId",usersArrayList[position].customerId)
                             intent.putExtra("customerName",usersArrayList[position].customerName)
@@ -61,11 +60,11 @@ class MainActivity13 : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@MainActivity13,error.toString(), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@mainActivity13,error.toString(), Toast.LENGTH_SHORT).show()
             }
         })
 
 
     }
-
+*/
 }

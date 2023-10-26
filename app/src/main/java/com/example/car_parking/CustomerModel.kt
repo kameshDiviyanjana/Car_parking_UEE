@@ -1,4 +1,4 @@
-package com.example.hiremenow
+package com.example.car_parking
 
 data class CustomerModel (
     var customerId:String? = null,

@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class LoginAct : AppCompatActivity() {
+class loginAct : AppCompatActivity() {
     private lateinit var dbconnecte : DatabaseReference
     lateinit var singup  : Button
     lateinit var reist : Button
@@ -23,7 +23,7 @@ class LoginAct : AppCompatActivity() {
         var passwork = findViewById<EditText>(R.id.editTextTextPassword)
         reist = findViewById(R.id.reister)
         reist.setOnClickListener {
-            val os = Intent(this,RegisterUsercar::class.java)
+            val os = Intent(this, RegisterUsercar::class.java)
 
             startActivity(os)
         }
@@ -44,11 +44,11 @@ class LoginAct : AppCompatActivity() {
                     val  p = auser.toString()
                     if ((userName ==auser) && (userpassword == passw) && (type == "u")) {
 
-                        val os = Intent(this,HomedashboredUser::class.java)
+                        val os = Intent(this, homedashboredUser::class.java)
 
                         startActivity(os)
                     }else if((userName ==auser) && (userpassword == passw) && (type == "o")){
-                        val os = Intent(this,Testowner::class.java)
+                        val os = Intent(this, listHome::class.java)
 
                         startActivity(os)
 

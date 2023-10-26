@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     style="@style/SCREEN"
     android:layout_height="match_parent"
-    tools:context=".ListHome">
+    tools:context=".listHome">
 
     <Button
         android:id="@+id/addp1"

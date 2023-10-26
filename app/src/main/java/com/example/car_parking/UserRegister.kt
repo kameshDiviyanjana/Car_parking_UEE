@@ -35,7 +35,7 @@ class UserRegister : Fragment() {
 
 
         backbtn.setOnClickListener {
-            val move =Intent(this.context,LoginAct::class.java)
+            val move =Intent(this.context, loginAct::class.java)
             startActivity(move)
         }
         sigup.setOnClickListener {
@@ -53,7 +53,7 @@ class UserRegister : Fragment() {
 
                 dbcon.child(Username).setValue(adduser).addOnSuccessListener{
 
-                    val move = Intent(this.context,LoginAct::class.java)
+                    val move = Intent(this.context, loginAct::class.java)
                     startActivity(move)
                 }.addOnFailureListener {
 

@@ -20,13 +20,11 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.car_parking.databinding.ActivityMapsBinding
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.Polyline
 import com.google.android.gms.maps.model.PolylineOptions
@@ -38,7 +36,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.IOException
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,GoogleMap.OnMarkerClickListener ,GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
+class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,GoogleMap.OnMarkerClickListener ,GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
     private lateinit var mMap: GoogleMap
 
@@ -94,7 +92,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
             ) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                LOCATION_REQ_CODE)
+                LOCATION_REQ_CODE
+            )
             return
         }
         mMap.isMyLocationEnabled = true

@@ -16,48 +16,35 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HireMeNow"
+        android:theme="@style/Theme.Car_parking"
         tools:targetApi="31">
-
         <activity
-            android:name=".MainActivity13"
+            android:name=".Newazctivety"
+            android:exported="false" />
+        <activity
+            android:name=".mainActivity5"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity12"
+            android:name=".mainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity5"
+            android:name=".mainActivity2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".listHome"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ListHome"
-            android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -69,7 +56,7 @@
             android:name=".vehiclBokkin"
             android:exported="false" />
         <activity
-            android:name=".HomedashboredUser"
+            android:name=".homedashboredUser"
             android:exported="false" />
         <activity
             android:name=".Testowner"
@@ -78,7 +65,7 @@
             android:name=".RegisterUsercar"
             android:exported="false" />
         <activity
-            android:name=".LoginAct"
+            android:name=".loginAct"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -102,14 +89,9 @@
             android:value="AIzaSyCarMeCtgnG3ubayWi1BbxEB8iIC_EcJSM" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".mapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

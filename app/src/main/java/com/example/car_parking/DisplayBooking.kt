@@ -1,5 +1,6 @@
 package com.example.car_parking
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,17 +16,18 @@ import com.google.firebase.database.ValueEventListener
 class displayBooking : AppCompatActivity() {
     private lateinit var recycleBus : RecyclerView
     private lateinit var buslists : ArrayList<Bookpark>
-    lateinit var  adapt : Displayeadapter
+    lateinit var  adapt : displayeadapter
     private lateinit var dbconnecte : DatabaseReference
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_booking)
-        recycleBus =findViewById(R.id.bookings)
+        recycleBus =findViewById(R.id.bookingss)
         recycleBus.layoutManager = LinearLayoutManager(this)
         recycleBus.setHasFixedSize(true)
 
         buslists = arrayListOf()
-        adapt = Displayeadapter(buslists)
+        adapt = displayeadapter(buslists)
         displayeBushalt()
     }
     private fun displayeBushalt() {
@@ -38,11 +40,11 @@ class displayBooking : AppCompatActivity() {
                         val halts = busSnapshor.getValue(Bookpark::class.java)
                         buslists.add(halts!!)
                     }
-                    var adp = Displayeadapter(buslists)
+                    var adp = displayeadapter(buslists)
                     recycleBus.adapter =adp
-                    adp.setonItemClickListener(object :Displayeadapter.onItemClickListener{
+                    adp.setonItemClickListener(object : displayeadapter.onItemClickListener {
                         override fun inItemckick(position: Int) {
-                            val intent = Intent(this@displayBooking,MapsActivity::class.java)
+                            val intent = Intent(this@displayBooking, mapsActivity::class.java)
                             intent.putExtra("id",buslists[position].names)
                             intent.putExtra("name",buslists[position].pakingplaces)
 

@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 
-class HomedashboredUser : AppCompatActivity() {
+class homedashboredUser : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,19 +17,19 @@ class HomedashboredUser : AppCompatActivity() {
         var btnbook = findViewById<Button>(R.id.reciverplace)
 
         btnbook.setOnClickListener {
-            val os = Intent(this,vehiclBokkin::class.java)
+            val os = Intent(this, vehiclBokkin::class.java)
 
             startActivity(os)
         }
         mapsvs.setOnClickListener {
-            val mapsAct = Intent(this,MapsActivity::class.java)
+            val mapsAct = Intent(this, mapsActivity::class.java)
 
             startActivity(mapsAct)
 
         }
 
         bookingim.setOnClickListener {
-            val bookinAct = Intent(this,displayBooking::class.java)
+            val bookinAct = Intent(this, displayBooking::class.java)
 
             startActivity(bookinAct)
         }

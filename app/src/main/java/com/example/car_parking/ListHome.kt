@@ -1,17 +1,14 @@
-package com.example.hiremenow
+package com.example.car_parking
 
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
-import com.google.api.Context
-import com.google.firebase.database.core.view.View
 
-class ListHome : AppCompatActivity() {
+class listHome : AppCompatActivity() {
 
     private lateinit var switcher: Switch
     private var nightMode: Boolean = false
@@ -26,13 +23,13 @@ class ListHome : AppCompatActivity() {
 
         val p1: Button = findViewById(R.id.addp1)
         p1.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, mainActivity::class.java)
             startActivity(intent)
         }
 
         val p2: Button = findViewById(R.id.addp2)
         p2.setOnClickListener {
-            val intent = Intent(this, MainActivity13::class.java)
+            val intent = Intent(this, mainActivity13::class.java)
             startActivity(intent)
         }
 
