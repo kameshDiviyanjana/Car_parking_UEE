@@ -29,7 +29,7 @@ class LoginAct : AppCompatActivity() {
         }
         singup.setOnClickListener {
 
-            dbconnecte = FirebaseDatabase.getInstance().getReference("Users")
+            dbconnecte = FirebaseDatabase.getInstance().getReference("Usersregister")
             var  userName = username.text.toString()
             var userpassword = passwork.text.toString()
             dbconnecte.child(userName).get().addOnSuccessListener {
@@ -39,17 +39,17 @@ class LoginAct : AppCompatActivity() {
                     val email= it.child("email").value
                     val passw =it.child("passwored").value
                     val disname = it.child("displayename").value
-                     val type = it.child("type").value
+                     val type = it.child("typs").value
 
                     val  p = auser.toString()
-                    if ((userName ==auser) && (userpassword == passw) && (type == 'u')) {
+                    if ((userName ==auser) && (userpassword == passw) && (type == "u")) {
 
                         val os = Intent(this,HomedashboredUser::class.java)
 
                         startActivity(os)
-                    }else if((userName ==auser) && (userpassword == passw) && (type == 'o')){
+                    }else if((userName ==auser) && (userpassword == passw) && (type == "o")){
                         val os = Intent(this,Testowner::class.java)
-                        os.putExtra("niknakes",p)
+
                         startActivity(os)
 
                     } else{

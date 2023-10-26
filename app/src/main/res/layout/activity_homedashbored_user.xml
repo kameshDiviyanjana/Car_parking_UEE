@@ -6,13 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".HomedashboredUser">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="208dp"
-        android:layout_height="135dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="204dp"
-        android:text="Homejdsgd"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="295dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mapimages" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="288dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="244dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bookinhinages" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="203dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="176dp"
+        android:backgroundTint="#E8D213"
+        android:text="Book My Place"
+        android:textColor="#605B5B"
+        app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="57dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="276dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
