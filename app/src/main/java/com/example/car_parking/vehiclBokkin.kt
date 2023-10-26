@@ -52,7 +52,8 @@ class vehiclBokkin : AppCompatActivity() {
                 slot.text.clear()
                 Toast.makeText(this,"Add sucefull",Toast.LENGTH_LONG).show()
 
-
+              val ye =Intent(this,displayBooking::class.java)
+                startActivity(ye)
 
             }.addOnFailureListener {
                 Toast.makeText(this,"DB connection fails",Toast.LENGTH_LONG).show()

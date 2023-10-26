@@ -29,7 +29,7 @@ class HomedashboredUser : AppCompatActivity() {
         }
 
         bookingim.setOnClickListener {
-            val bookinAct = Intent(this,vehiclBokkin::class.java)
+            val bookinAct = Intent(this,displayBooking::class.java)
 
             startActivity(bookinAct)
         }
