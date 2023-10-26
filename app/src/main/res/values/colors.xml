@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_text_background">#f6fbff</color>
     <color name="deietecloure">#DD1B0D</color>
+    <color name="textField_color">?android:attr/textColorHintInverse</color>
+    <color name="Button_color">#FFFF8800</color>
+    <color name="Title_color">#0D2ACA</color>
+    <color name="undeline">#FF000000</color>
 </resources>

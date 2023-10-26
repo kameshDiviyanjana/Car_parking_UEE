@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimension_height">54dp</dimen>
+    <dimen name="dimension_btnMarginTop">36dp</dimen>
+    <dimen name="dimension_iconTop">60dp</dimen>
+    <dimen name="dimension_edtTextMarginTop">24dp</dimen>
+    <dimen name="dimension_edtTextMarginEnd">32dp</dimen>
+    <dimen name="retrieveBtn_marginTop">16dp</dimen>
+    <dimen name="retrieveTxtBox_layoutHeight">30dp</dimen>
+    <dimen name="retrieveTxtBox_layoutMarginTop">4dp</dimen>
+    <dimen name="retrieve2_layoutMarginTop">100dp</dimen>
+    <dimen name="delete_layoutHeight">30dp</dimen>
+    <dimen name="delete_layoutMarginTop">40dp</dimen>
+   <dimen name="deleteUpdate_textViewMarginTop">4dp</dimen>
+</resources>

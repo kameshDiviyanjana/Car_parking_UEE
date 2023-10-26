@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    style="@style/SCREEN"
+    android:layout_height="match_parent"
+    tools:context=".ListHome">
+
+    <Button
+        android:id="@+id/addp1"
+        android:layout_width="342dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFBB33"
+        android:drawableLeft="@drawable/parking_logo"
+        android:text="Add Parking"
+        style="@style/BUTTON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/addp2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addp2"
+        android:layout_width="342dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFBB33"
+        android:drawableLeft="@drawable/parking_his_logo"
+        android:text="Parking History"
+        style="@style/BUTTON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/addp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addp3"
+        android:layout_width="342dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFBB33"
+        android:drawableLeft="@drawable/report_logo"
+        android:text="Parking Report"
+        style="@style/BUTTON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/addp4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/addp4"
+        android:layout_width="342dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFBB33"
+        android:drawableLeft="@drawable/logout_logo"
+        android:text="Log Out"
+        style="@style/BUTTON"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="414dp"
+        android:layout_height="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yello" />
+
+    <Switch
+        android:id="@+id/switcher"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:text="Mode"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/HelpSupp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimension_height"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Property Dash"
+        style="@style/TEXT"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
