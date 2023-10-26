@@ -48,7 +48,7 @@ class mainActivity2 : AppCompatActivity() {
 
         mTask.addOnSuccessListener {
             Toast.makeText(this ,"Your data deleted",Toast.LENGTH_LONG).show()
-            val intent = Intent(this, mainActivity13::class.java)
+            val intent = Intent(this, Newazctivety::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.Adapter<displayeadapter.MyviweHolder> () {
+class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.Adapter<Displayeadapter.MyviweHolder> () {
 
 
     lateinit var  l : onItemClickListener
@@ -44,12 +44,13 @@ class displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
     class MyviweHolder(itemviewdispaly: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemviewdispaly){
 
-        val name : TextView = itemviewdispaly.findViewById(R.id.nma)
+        val name : TextView = itemviewdispaly.findViewById(R.id.haltnew)
         val phonenumber : TextView = itemviewdispaly.findViewById(R.id.haltnew2)
         val carnumder : TextView = itemviewdispaly.findViewById(R.id.haltnew3)
         val slot : TextView = itemviewdispaly.findViewById(R.id.haltnew4)
         val time : TextView = itemviewdispaly.findViewById(R.id.haltnew5)
         val pakingplaces : TextView = itemviewdispaly.findViewById(R.id.haltnew6)
+
 
 
         init {

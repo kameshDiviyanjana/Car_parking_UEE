@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener
 class displayBooking : AppCompatActivity() {
     private lateinit var recycleBus : RecyclerView
     private lateinit var buslists : ArrayList<Bookpark>
-    lateinit var  adapt : displayeadapter
+    lateinit var  adapt : Displayeadapter
     private lateinit var dbconnecte : DatabaseReference
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class displayBooking : AppCompatActivity() {
         recycleBus.setHasFixedSize(true)
 
         buslists = arrayListOf()
-        adapt = displayeadapter(buslists)
+        adapt = Displayeadapter(buslists)
         displayeBushalt()
     }
     private fun displayeBushalt() {
@@ -40,9 +40,9 @@ class displayBooking : AppCompatActivity() {
                         val halts = busSnapshor.getValue(Bookpark::class.java)
                         buslists.add(halts!!)
                     }
-                    var adp = displayeadapter(buslists)
+                    var adp = Displayeadapter(buslists)
                     recycleBus.adapter =adp
-                    adp.setonItemClickListener(object : displayeadapter.onItemClickListener {
+                    adp.setonItemClickListener(object : Displayeadapter.onItemClickListener {
                         override fun inItemckick(position: Int) {
                             val intent = Intent(this@displayBooking, mapsActivity::class.java)
                             intent.putExtra("id",buslists[position].names)

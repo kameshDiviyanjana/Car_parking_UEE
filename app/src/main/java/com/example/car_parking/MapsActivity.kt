@@ -10,6 +10,7 @@ import android.location.LocationListener
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -60,6 +61,10 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
         fusedlocation = LocationServices.getFusedLocationProviderClient(this)
+        val cu = findViewById<Button>(R.id.cureentlocationbtn)
+        cu.setOnClickListener {
+            setMap()
+        }
     }
 
     /**

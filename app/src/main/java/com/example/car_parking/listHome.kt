@@ -29,7 +29,7 @@ class listHome : AppCompatActivity() {
 
         val p2: Button = findViewById(R.id.addp2)
         p2.setOnClickListener {
-            val intent = Intent(this, mainActivity13::class.java)
+            val intent = Intent(this, Newazctivety::class.java)
             startActivity(intent)
         }
 
