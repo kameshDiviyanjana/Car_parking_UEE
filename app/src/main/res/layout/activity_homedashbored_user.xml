@@ -7,7 +7,7 @@
     tools:context=".HomedashboredUser">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/mapview"
         android:layout_width="295dp"
         android:layout_height="167dp"
         android:layout_marginStart="48dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/mapimages" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/bokinggo"
         android:layout_width="288dp"
         android:layout_height="164dp"
         android:layout_marginStart="52dp"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/bookinhinages" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/reciverplace"
         android:layout_width="203dp"
         android:layout_height="53dp"
         android:layout_marginStart="92dp"
