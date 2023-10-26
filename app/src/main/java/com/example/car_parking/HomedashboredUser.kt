@@ -12,16 +12,16 @@ class HomedashboredUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homedashbored_user)
-       var maps = findViewById<ImageView>(R.id.mapview)
+       var mapsvs = findViewById<ImageView>(R.id.mapview)
         var bookingim =findViewById<ImageView>(R.id.bokinggo)
-        var btnbook = findViewById<Button>(R.id.regidterbtn)
+        var btnbook = findViewById<Button>(R.id.reciverplace)
 
         btnbook.setOnClickListener {
             val os = Intent(this,vehiclBokkin::class.java)
 
             startActivity(os)
         }
-        maps.setOnClickListener {
+        mapsvs.setOnClickListener {
             val mapsAct = Intent(this,MapsActivity::class.java)
 
             startActivity(mapsAct)
