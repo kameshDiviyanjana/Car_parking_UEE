@@ -7,47 +7,77 @@
     tools:context=".homedashboredUser">
 
     <ImageView
-        android:id="@+id/mapview"
-        android:layout_width="295dp"
-        android:layout_height="167dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/mapimages" />
-
-    <ImageView
-        android:id="@+id/bokinggo"
-        android:layout_width="288dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="244dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bookinhinages" />
-
-    <Button
-        android:id="@+id/reciverplace"
-        android:layout_width="203dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="176dp"
-        android:backgroundTint="#E8D213"
-        android:text="Book My Place"
-        android:textColor="#605B5B"
-        app:cornerRadius="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="57dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="276dp"
-        android:text="TextView"
+        android:id="@+id/imageView3"
+        android:layout_width="417dp"
+        android:layout_height="138dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cityimage" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/view"
+        style="@style/custom_card_vive_home_dashborde"
+        android:layout_width="424dp"
+        android:layout_height="618dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/reciverplace"
+                android:layout_width="203dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#E8D213"
+                android:text="Book My Place"
+                android:textColor="#605B5B"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mapview"
+                android:layout_width="295dp"
+                android:layout_height="167dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.528"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/mapimages" />
+
+            <ImageView
+                android:id="@+id/bokinggo"
+                android:layout_width="288dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="224dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/bookinhinages" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="183dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginBottom="408dp"
+                android:text="Option"
+                android:textAlignment="center"
+                android:textColor="#171616"
+                android:textSize="35sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
