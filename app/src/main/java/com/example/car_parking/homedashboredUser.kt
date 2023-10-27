@@ -24,7 +24,7 @@ class homedashboredUser : AppCompatActivity() {
             startActivity(mapsAct)
         }
         btnbook.setOnClickListener {
-            val os = Intent(this, vehiclBokkin::class.java)
+            val os = Intent(this, VehicleBooking::class.java)
 
             startActivity(os)
         }

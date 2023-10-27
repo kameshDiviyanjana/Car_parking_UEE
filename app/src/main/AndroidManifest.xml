@@ -53,7 +53,7 @@
             android:name=".displayBooking"
             android:exported="false" />
         <activity
-            android:name=".vehiclBokkin"
+            android:name=".VehicleBooking"
             android:exported="false" />
         <activity
             android:name=".homedashboredUser"

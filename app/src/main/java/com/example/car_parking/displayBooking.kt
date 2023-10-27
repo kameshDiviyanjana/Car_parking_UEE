@@ -31,7 +31,7 @@ class displayBooking : AppCompatActivity() {
         displayeBushalt()
     }
     private fun displayeBushalt() {
-        dbconnecte = FirebaseDatabase.getInstance().getReference("RecervetionPlace")
+        dbconnecte = FirebaseDatabase.getInstance().getReference("Reservations")
         dbconnecte.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -42,7 +42,7 @@ class displayBooking : AppCompatActivity() {
                     var adp = Displayeadapter(buslists)
                     recycleBus.adapter = adp
                     adp.setonItemClickListener(object : Displayeadapter.onItemClickListener {
-                        override fun inItemckick(position: Int) {
+                        override fun inItemclick(position: Int) {
                             val intent = Intent(this@displayBooking, mapsActivity::class.java)
                             intent.putExtra("id", buslists[position].name)
                             intent.putExtra("name", buslists[position].parkingName)

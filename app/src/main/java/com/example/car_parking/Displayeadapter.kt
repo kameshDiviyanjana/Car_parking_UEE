@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 
 class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.Adapter<Displayeadapter.MyviweHolder> () {
 
@@ -13,7 +12,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
     lateinit var  l : onItemClickListener
     interface onItemClickListener{
 
-        fun inItemckick(position: Int)
+        fun inItemclick(position: Int)
     }
 
     fun setonItemClickListener(ls : onItemClickListener) {
@@ -65,7 +64,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
             itemviewdispaly.setOnClickListener{
 
-                listener.inItemckick(adapterPosition)
+                listener.inItemclick(adapterPosition)
 
 
             }
