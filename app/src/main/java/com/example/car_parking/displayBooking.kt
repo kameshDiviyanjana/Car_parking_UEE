@@ -34,45 +34,31 @@ class displayBooking : AppCompatActivity() {
         dbconnecte = FirebaseDatabase.getInstance().getReference("RecervetionPlace")
         dbconnecte.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-
-                    for (busSnapshor in snapshot.children){
+                if (snapshot.exists()) {
+                    for (busSnapshor in snapshot.children) {
                         val halts = busSnapshor.getValue(Bookpark::class.java)
                         buslists.add(halts!!)
                     }
                     var adp = Displayeadapter(buslists)
-                    recycleBus.adapter =adp
+                    recycleBus.adapter = adp
                     adp.setonItemClickListener(object : Displayeadapter.onItemClickListener {
                         override fun inItemckick(position: Int) {
                             val intent = Intent(this@displayBooking, mapsActivity::class.java)
-                            intent.putExtra("id",buslists[position].names)
-                            intent.putExtra("name",buslists[position].pakingplaces)
+                            intent.putExtra("id", buslists[position].name)
+                            intent.putExtra("name", buslists[position].parkingName)
 
+                            Toast.makeText(this@displayBooking, "you click item code works", Toast.LENGTH_LONG).show()
                             startActivity(intent)
-                            Toast.makeText(this@displayBooking,"you click item nrwfgvhvhvh code works", Toast.LENGTH_LONG).show()
-
                         }
-
                     })
-                    /*   adapt = Myadapter(buslist)
-                       displayeBushalt()
-                       adapt.onItemclick ={
-                           val intent =Intent(this@MainActivity,BusTickeclculate::class.java)
-                           intent.putExtra("ticket",it)
-
-                           startActivity(intent)
-                       }*/
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                // Handle database error here
+                Toast.makeText(this@displayBooking, "Database error: $error", Toast.LENGTH_LONG).show()
             }
-
-
-
-
         })
-
     }
+
 }

@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 class vehiclBokkin : AppCompatActivity() {
     private lateinit var dbconection: DatabaseReference
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint("WrongViewCast", "MissingInflatedId", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vehicl_bokkin)
@@ -25,31 +25,40 @@ class vehiclBokkin : AppCompatActivity() {
         val vehicnum = findViewById<EditText>(R.id.vehicnum)
         val phonenum = findViewById<EditText>(R.id.phonenum)
         val pakingplace = findViewById<EditText>(R.id.parking)
-        val time = findViewById<EditText>(R.id.timewhre)
+        val date = findViewById<EditText>(R.id.date)
+        val starttime = findViewById<EditText>(R.id.start_time)
+        val endtime = findViewById<EditText>(R.id.end_time)
         val slot = findViewById<EditText>(R.id.slot)
 
         book.setOnClickListener {
 
 
-            val names = name.text.toString()
+            val Name = name.text.toString()
             val vehicnumer = vehicnum.text.toString()
             val phonenumber =phonenum.text.toString()
+            val Date = date.text.toString()
+            val Starttime = starttime.text.toString()
+            val Endtime = endtime.text.toString()
             val pakingplaces = pakingplace.text.toString()
-            val timeresive = time.text.toString()
             val slotbook = slot.text.toString()
 
 
             dbconection = FirebaseDatabase.getInstance().getReference("RecervetionPlace")
-            val addtime = Bookpark(names,vehicnumer,phonenumber,pakingplaces,timeresive,slotbook)
+            val addtime = Bookpark(Name,vehicnumer,phonenumber,pakingplaces,Date,slotbook,Starttime,Endtime)
 
-            dbconection.child(names).setValue(addtime).addOnSuccessListener {
+            dbconection.child(Name).setValue(addtime).addOnSuccessListener {
                 name.text.clear()
-                vehicnum.text.clear()
                 phonenum.text.clear()
+                vehicnum.text.clear()
+                date.text.clear()
+                starttime.text.clear()
+                endtime.text.clear()
                 pakingplace.text.clear()
-                time.text.clear()
                 slot.text.clear()
-                Toast.makeText(this,"Add sucefull",Toast.LENGTH_LONG).show()
+
+
+
+                Toast.makeText(this,"Slot booked successfully",Toast.LENGTH_LONG).show()
 
               val ye =Intent(this, displayBooking::class.java)
                 startActivity(ye)
@@ -64,11 +73,13 @@ class vehiclBokkin : AppCompatActivity() {
 
         cnacsel.setOnClickListener {
 
-             name.text.clear()
+            name.text.clear()
             vehicnum.text.clear()
             phonenum.text.clear()
+            date.text.clear()
+            starttime.text.clear()
+            endtime.text.clear()
             pakingplace.text.clear()
-            time.text.clear()
             slot.text.clear()
 
 
