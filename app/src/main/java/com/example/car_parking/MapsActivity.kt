@@ -77,7 +77,7 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
         }
         locationSearch = findViewById(R.id.editText)
         val bundle : Bundle? = intent.extras
-        val haltname = bundle?.getString("name")
+        val haltname: String? = bundle?.getString("name")
 
 
 
