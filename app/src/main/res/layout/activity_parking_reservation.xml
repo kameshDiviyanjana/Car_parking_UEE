@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VehicleBooking">
+
+
+    <Button
+        android:id="@+id/selectDateButton"
+        android:layout_width="208dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicnum"
+        app:layout_wrapBehaviorInParent="horizontal_only"
+        tools:ignore="NotSibling" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/custom_card_view_style_dashborde"
+        android:layout_width="419dp"
+        android:layout_height="720dp"
+        android:layout_marginBottom="12dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/CancelBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="556dp"
+            android:verticalScrollbarPosition="defaultPosition">
+
+            <EditText
+                android:id="@+id/nma"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/phonenum"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Phone number"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nma" />
+
+            <EditText
+                android:id="@+id/vehicnum"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Vehicle number"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phonenum" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="none"
+                android:textAlignment="center"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicnum" />
+
+            <EditText
+                android:id="@+id/start_time"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Start Time"
+                android:inputType="none"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                android:focusable="false"
+                android:clickable="true"
+                />
+
+            <EditText
+                android:id="@+id/end_time"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="End Time"
+                android:inputType="none"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_time"
+                android:focusable="false"
+                android:clickable="true"
+                />
+
+            <Spinner
+                android:id="@+id/parkingSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textshap"
+                app:layout_constraintTop_toBottomOf="@+id/end_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            <EditText
+                android:id="@+id/slot"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/textshap"
+                android:ems="10"
+                android:hint="Slot number"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_time" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/CancelBtn"
+        android:layout_width="140dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/deietecloure"
+        android:text="Cancel"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BookingBtn"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF5722"
+        android:text="Book"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

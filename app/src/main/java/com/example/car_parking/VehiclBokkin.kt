@@ -1,3 +1,4 @@
+
 package com.example.car_parking
 
 import android.annotation.SuppressLint
@@ -60,19 +61,3 @@ class vehiclBokkin : AppCompatActivity() {
 
         }
 
-
-
-        cnacsel.setOnClickListener {
-
-             name.text.clear()
-            vehicnum.text.clear()
-            phonenum.text.clear()
-            pakingplace.text.clear()
-            time.text.clear()
-            slot.text.clear()
-
-
-        }
-
-    }
-}

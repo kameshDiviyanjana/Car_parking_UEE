@@ -3,132 +3,275 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="320dp">
+    android:layout_height="350dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="385dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="4dp"
-        app:cardCornerRadius="50dp"
-        app:cardElevation="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/custom_card_view_style_dashborde"
+        android:layout_width="429dp"
+        android:layout_height="350dp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="365dp"
-            android:layout_height="278dp"
+        <TextView
+            android:id="@+id/haltnew"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
             android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.596"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.061" />
 
-            <TextView
-                android:id="@+id/haltnew"
-                android:layout_width="221dp"
-                android:layout_height="26dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew7"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Name :"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
-                android:textColor="#131313"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.063" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.061" />
 
-            <TextView
-                android:id="@+id/haltnew2"
-                android:layout_width="221dp"
-                android:layout_height="27dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew8"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Phone :"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
-                android:textColor="#131313"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.227" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171" />
 
-            <TextView
-                android:id="@+id/haltnew3"
-                android:layout_width="221dp"
-                android:layout_height="27dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew2"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
 
-                android:textColor="#131313"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.537" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.173" />
 
-            <TextView
-                android:id="@+id/haltnew4"
-                android:layout_width="221dp"
-                android:layout_height="27dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew12"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Slot Number : "
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
-                android:textColor="#131313"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.713" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.978" />
 
-            <TextView
-                android:id="@+id/haltnew5"
-                android:layout_width="221dp"
-                android:layout_height="27dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew10"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Start Time :"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
-                android:textColor="#DC4E43"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.884" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.562" />
 
-            <TextView
-                android:id="@+id/haltnew6"
-                android:layout_width="228dp"
-                android:layout_height="30dp"
-                android:background="@drawable/textshap"
-                android:text="TextView"
-                android:textAlignment="center"
+        <TextView
+            android:id="@+id/haltnew17"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Date :"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
-                android:textColor="#FA9C11"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.353"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.386" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.434" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/haltnew14"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="End Time :"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
 
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.691" />
+
+        <TextView
+            android:id="@+id/haltnew11"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:text="Parking Name : "
+            android:textAlignment="textStart"
+            android:textColor="#131313"
+
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.828" />
+
+        <TextView
+            android:id="@+id/haltnew4"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.839" />
+
+        <TextView
+            android:id="@+id/haltnew13"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.569" />
+
+        <TextView
+            android:id="@+id/haltnew3"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.699" />
+
+        <TextView
+            android:id="@+id/haltnew5"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.99" />
+
+        <TextView
+            android:id="@+id/haltnew6"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.315" />
+
+        <TextView
+            android:id="@+id/haltnew16"
+            android:layout_width="164dp"
+            android:layout_height="27dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#131313"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.439" />
+
+        <TextView
+            android:id="@+id/haltnew15"
+            android:layout_width="104dp"
+            android:layout_height="25dp"
+            android:text="Vehicle Number:"
+            android:textAlignment="textStart"
+            android:textColor="#131313"
+
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.313" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

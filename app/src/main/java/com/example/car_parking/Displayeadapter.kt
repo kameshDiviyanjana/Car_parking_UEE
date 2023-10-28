@@ -12,7 +12,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
     lateinit var  l : onItemClickListener
     interface onItemClickListener{
 
-        fun inItemckick(position: Int)
+        fun inItemclick(position: Int)
     }
 
     fun setonItemClickListener(ls : onItemClickListener) {
@@ -26,12 +26,14 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
     override fun onBindViewHolder(holder: MyviweHolder, position: Int) {
         val currentitem = haltlist[position]
-        holder.name.text =currentitem.names
-        holder.phonenumber.text =currentitem.phonenumber
-        holder.carnumder.text =currentitem.vehicnumer
-        holder.slot.text =currentitem.slotbook
-        holder.time.text =currentitem.timeresive
-        holder.pakingplaces.text =currentitem.pakingplaces
+        holder.name.text =currentitem.name
+        holder.phonenumber.text = currentitem.phoneNumber.toString()
+        holder.Vehiclenumber.text =currentitem.vehicleNumber
+        holder.date.text = currentitem.date
+        holder.slot.text = currentitem.slotNumber.toString()
+        holder.starttime.text =currentitem.startTime
+        holder.endtime.text =currentitem.endTime
+        holder.pakingplaces.text =currentitem.parkingName
 
 
 
@@ -46,10 +48,12 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
         val name : TextView = itemviewdispaly.findViewById(R.id.haltnew)
         val phonenumber : TextView = itemviewdispaly.findViewById(R.id.haltnew2)
-        val carnumder : TextView = itemviewdispaly.findViewById(R.id.haltnew3)
-        val slot : TextView = itemviewdispaly.findViewById(R.id.haltnew4)
-        val time : TextView = itemviewdispaly.findViewById(R.id.haltnew5)
-        val pakingplaces : TextView = itemviewdispaly.findViewById(R.id.haltnew6)
+        val Vehiclenumber : TextView = itemviewdispaly.findViewById(R.id.haltnew6)
+        val date : TextView = itemviewdispaly.findViewById(R.id.haltnew16)
+        val starttime : TextView = itemviewdispaly.findViewById(R.id.haltnew13)
+        val endtime : TextView = itemviewdispaly.findViewById(R.id.haltnew3)
+        val pakingplaces : TextView = itemviewdispaly.findViewById(R.id.haltnew4)
+        val slot : TextView = itemviewdispaly.findViewById(R.id.haltnew5)
 
 
 
@@ -60,7 +64,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
             itemviewdispaly.setOnClickListener{
 
-                listener.inItemckick(adapterPosition)
+                listener.inItemclick(adapterPosition)
 
 
             }
