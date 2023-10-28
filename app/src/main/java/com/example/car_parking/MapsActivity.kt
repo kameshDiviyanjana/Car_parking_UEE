@@ -54,6 +54,9 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
     private lateinit var currentlocation: LatLng
     private var polyline: Polyline? = null
 
+   private lateinit var locationSearch: EditText
+    private lateinit var location : String
+
     companion object{
 
         private const val  LOCATION_REQ_CODE = 1
@@ -72,6 +75,16 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
         cu.setOnClickListener {
             setMap()
         }
+        locationSearch = findViewById(R.id.editText)
+        val bundle : Bundle? = intent.extras
+        val haltname = bundle?.getString("name")
+
+
+
+            if (haltname != null) {
+                locationSearch.setText(haltname.toString())
+            }
+
     }
 
     /**
@@ -176,10 +189,10 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
         TODO("Not yet implemented")
     }
     fun searchLocation(view: View){
-        val locationSearch: EditText
-        locationSearch = findViewById(R.id.editText)
 
-       var location = locationSearch.text.toString()
+
+
+        location = locationSearch.text.toString()
         var addressList: List<Address>? = null
 
         if (location == null || location == ""){
@@ -188,6 +201,7 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
             val geoCoder = Geocoder(this)
             try {
                 addressList = geoCoder.getFromLocationName(location, 1)
+                locationSearch.text.clear()
             }catch (e: IOException){
                 e.printStackTrace()
             }

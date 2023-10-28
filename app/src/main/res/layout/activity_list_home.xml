@@ -9,14 +9,14 @@
 
     <Button
         android:id="@+id/addp1"
+        style="@style/BUTTON"
         android:layout_width="342dp"
         android:layout_height="70dp"
         android:layout_marginBottom="48dp"
         android:background="@drawable/border"
-        android:backgroundTint="#FFBB33"
+        android:backgroundTint="#C89123"
         android:drawableLeft="@drawable/parking_logo"
         android:text="Add Parking"
-        style="@style/BUTTON"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/addp2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,14 +28,14 @@
 
     <Button
         android:id="@+id/addp2"
+        style="@style/BUTTON"
         android:layout_width="342dp"
         android:layout_height="70dp"
         android:layout_marginBottom="48dp"
         android:background="@drawable/border"
-        android:backgroundTint="#FFBB33"
+        android:backgroundTint="#C89123"
         android:drawableLeft="@drawable/parking_his_logo"
         android:text="Parking History"
-        style="@style/BUTTON"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/addp3"
         app:layout_constraintEnd_toEndOf="parent"

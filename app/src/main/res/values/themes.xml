@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Car_parking" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">#ffad33</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,6 +12,19 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <!-- Light mode -->
+    <style name="SCREEN">
+        <item name="android:background">#FFF</item>
+    </style>
+
+    <style name="TEXT">
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="BUTTON">
+        <item name="android:background">#B9BABA</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="custom_card_view_style_dashborde" parent="Widget.MaterialComponents.CardView">
@@ -81,18 +94,6 @@
 
 
     </style>
-    <!-- Light mode -->
-    <style name="SCREEN">
-        <item name="android:background">#FFF</item>
-    </style>
 
-    <style name="TEXT">
-        <item name="android:textColor">#000</item>
-    </style>
-
-    <style name="BUTTON">
-        <item name="android:background">#B9BABA</item>
-        <item name="android:textColor">#000000</item>
-    </style>
 
 </resources>

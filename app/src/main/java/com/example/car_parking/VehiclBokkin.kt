@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 class vehiclBokkin : AppCompatActivity() {
     private lateinit var dbconection: DatabaseReference
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint("WrongViewCast", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vehicl_bokkin)
