@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Car_parking"
         tools:targetApi="31">
         <activity
+            android:name=".MyPoints"
+            android:exported="false" />
+        <activity
             android:name=".PaymentScreen"
             android:exported="false" />
         <activity
