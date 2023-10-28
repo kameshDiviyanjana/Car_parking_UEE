@@ -17,6 +17,7 @@ class homedashboredUser : AppCompatActivity() {
         var bookingim =findViewById<ImageView>(R.id.bokinggo)
         var btnbook = findViewById<Button>(R.id.reciverplace)
         var find = findViewById<EditText>(R.id.findg)
+        var mypoints = findViewById<Button>(R.id.btnviewpoints)
 
         find.setOnClickListener {
             val mapsAct = Intent(this, mapsActivity::class.java)
@@ -32,6 +33,13 @@ class homedashboredUser : AppCompatActivity() {
             val mapsAct = Intent(this, mapsActivity::class.java)
 
             startActivity(mapsAct)
+
+        }
+
+        mypoints.setOnClickListener {
+            val points = Intent(this, MyPoints::class.java)
+
+            startActivity(points)
 
         }
 
