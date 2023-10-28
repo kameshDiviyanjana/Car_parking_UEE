@@ -8,13 +8,14 @@ import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.*
 import androidx.appcompat.widget.AppCompatEditText
 import com.google.firebase.database.*
 
 class VehicleBooking : AppCompatActivity() {
     private lateinit var dbconection: DatabaseReference
-
+   private lateinit var slotbook  :String
     @SuppressLint("WrongViewCast", "MissingInflatedId", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +30,26 @@ class VehicleBooking : AppCompatActivity() {
         val date = findViewById<EditText>(R.id.date)
         val starttime = findViewById<EditText>(R.id.start_time)
         val endtime = findViewById<EditText>(R.id.end_time)
-        val slot = findViewById<EditText>(R.id.slot)
+        //val slot = findViewById<EditText>(R.id.slot)
+        val spinner: Spinner = findViewById(R.id.myspinner)
+        val fruits = arrayOf("Slot 1 ", "Slot 2", "Slot 3 ", "Slot 4", "Solt 5")
 
 
+        val adapterss = ArrayAdapter(this, android.R.layout.simple_spinner_item, fruits)
+        adapterss.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapterss
+
+         spinner.onItemSelectedListener
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedItem = parent?.getItemAtPosition(position).toString()
+                slotbook = selectedItem
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
         val databaseReference = FirebaseDatabase.getInstance().getReference("Customers")
 
         val dataList = mutableListOf<String>()
@@ -39,6 +57,8 @@ class VehicleBooking : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         val parkingSpinner = findViewById<Spinner>(R.id.parkingSpinner)
         parkingSpinner.adapter = adapter
+
+
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -161,7 +181,7 @@ class VehicleBooking : AppCompatActivity() {
             val Starttime = starttime.text.toString()
             val Endtime = endtime.text.toString()
             val parkings = parkingSpinner.selectedItem.toString()
-            val slotbook = slot.text.toString()
+           //  slotbook = slot.text.toString()
 
             if (Name.isEmpty() || vehicnumer.isEmpty() || phonenumber.isEmpty() || Date.isEmpty() ||
                 Starttime.isEmpty() || Endtime.isEmpty() || parkings.isEmpty() || slotbook.isEmpty()) {
@@ -180,7 +200,7 @@ class VehicleBooking : AppCompatActivity() {
                     starttime.text.clear()
                     endtime.text.clear()
                     parkingSpinner.setSelection(0)
-                    slot.text.clear()
+
 
                     Toast.makeText(this, "Slot booked successfully", Toast.LENGTH_LONG).show()
 
@@ -201,7 +221,7 @@ class VehicleBooking : AppCompatActivity() {
             starttime.text.clear()
             endtime.text.clear()
             parkingSpinner.setSelection(0)
-            slot.text.clear()
+            //slot.text.clear()
 
             val intent = Intent(this, homedashboredUser::class.java)
             startActivity(intent)

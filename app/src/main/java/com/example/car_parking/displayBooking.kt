@@ -19,14 +19,13 @@ class displayBooking : AppCompatActivity() {
     private lateinit var buslists : ArrayList<Bookpark>
     lateinit var  adapt : Displayeadapter
     private lateinit var dbconnecte : DatabaseReference
-    private lateinit var btnGoToPayment: Button
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_booking)
         recycleBus =findViewById(R.id.bookingss)
-        btnGoToPayment = findViewById(R.id.btngotopayment)
         recycleBus.layoutManager = LinearLayoutManager(this)
         recycleBus.setHasFixedSize(true)
 
@@ -34,11 +33,7 @@ class displayBooking : AppCompatActivity() {
         adapt = Displayeadapter(buslists)
         displayeBushalt()
 
-        btnGoToPayment.setOnClickListener {
-            // Create an intent to navigate to the PaymentScreenActivity
-            val intent = Intent(this, PaymentScreen::class.java)
-            startActivity(intent)
-        }
+
     }
     private fun displayeBushalt() {
         dbconnecte = FirebaseDatabase.getInstance().getReference("Reservations")
@@ -60,7 +55,15 @@ class displayBooking : AppCompatActivity() {
                             Toast.makeText(this@displayBooking, "you click item code works", Toast.LENGTH_LONG).show()
                             startActivity(intent)
                         }
-                    })
+                    }
+                    )
+
+                   adp.sdsf(object  : Displayeadapter.okkk{
+                       override fun paymove(position: Int) {
+                           val intent = Intent(this@displayBooking, PaymentScreen::class.java)
+                           startActivity(intent)
+                       }
+                   })
                 }
             }
 

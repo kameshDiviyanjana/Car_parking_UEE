@@ -69,7 +69,7 @@
         android:layout_width="304dp"
         android:layout_height="205dp"
         android:background="#C82A2A"
-        android:backgroundTint="#96EF99"
+        android:backgroundTint="#F3AB42"
         app:cardBackgroundColor="#F6F5F5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

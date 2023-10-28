@@ -86,12 +86,12 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/textshap"
+                android:clickable="false"
                 android:ems="10"
+                android:focusable="false"
                 android:hint="Date"
                 android:inputType="none"
                 android:textAlignment="center"
-                android:clickable="false"
-                android:focusable="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/vehicnum" />
@@ -103,16 +103,15 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/textshap"
+                android:clickable="true"
                 android:ems="10"
+                android:focusable="false"
                 android:hint="Start Time"
                 android:inputType="none"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/date"
-                android:focusable="false"
-                android:clickable="true"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/date" />
 
             <EditText
                 android:id="@+id/end_time"
@@ -121,16 +120,15 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/textshap"
+                android:clickable="true"
                 android:ems="10"
+                android:focusable="false"
                 android:hint="End Time"
                 android:inputType="none"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/start_time"
-                android:focusable="false"
-                android:clickable="true"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/start_time" />
 
             <Spinner
                 android:id="@+id/parkingSpinner"
@@ -139,27 +137,19 @@
                 android:layout_marginTop="13dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/textshap"
-                app:layout_constraintTop_toBottomOf="@+id/end_time"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-
-
-            <EditText
-                android:id="@+id/slot"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/textshap"
-                android:ems="10"
-                android:hint="Slot number"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/end_time" />
 
+
+            <Spinner
+                android:id="@+id/myspinner"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

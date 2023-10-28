@@ -76,14 +76,14 @@ class mapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener,G
             setMap()
         }
         locationSearch = findViewById(R.id.editText)
-        val bundle : Bundle? = intent.extras
-        val haltname: String? = bundle?.getString("name")
+       // val bundle : Bundle? = intent.extras
+       // val haltname: String? = bundle?.getString("name")
 
 
 
-            if (haltname != null) {
+         /*   if (haltname != null) {
                 locationSearch.setText(haltname.toString())
-            }
+            }*/
 
     }
 

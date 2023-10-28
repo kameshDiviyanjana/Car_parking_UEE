@@ -3,6 +3,7 @@ package com.example.car_parking
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,18 +11,25 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
 
     lateinit var  l : onItemClickListener
+    lateinit var jh :okkk
+
     interface onItemClickListener{
 
         fun inItemclick(position: Int)
-    }
 
+    }
+   interface  okkk  {
+       fun paymove(position: Int)
+   }
     fun setonItemClickListener(ls : onItemClickListener) {
         l = ls
     }
-
+    fun sdsf(lsd : okkk){
+        jh = lsd
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviweHolder {
         val bushalt = LayoutInflater.from(parent.context).inflate(R.layout.display_book,parent,false)
-        return MyviweHolder(bushalt,l)
+        return MyviweHolder(bushalt,l,jh)
     }
 
     override fun onBindViewHolder(holder: MyviweHolder, position: Int) {
@@ -44,7 +52,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
         return haltlist.size
     }
 
-    class MyviweHolder(itemviewdispaly: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemviewdispaly){
+    class MyviweHolder(itemviewdispaly: View, listener: onItemClickListener, jh: okkk) : RecyclerView.ViewHolder(itemviewdispaly){
 
         val name : TextView = itemviewdispaly.findViewById(R.id.haltnew)
         val phonenumber : TextView = itemviewdispaly.findViewById(R.id.haltnew2)
@@ -54,8 +62,7 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
         val endtime : TextView = itemviewdispaly.findViewById(R.id.haltnew3)
         val pakingplaces : TextView = itemviewdispaly.findViewById(R.id.haltnew4)
         val slot : TextView = itemviewdispaly.findViewById(R.id.haltnew5)
-
-
+        val f : Button = itemviewdispaly.findViewById(R.id.btngotopayment)
 
         init {
             /*Bushalt.setOnClickListener{v :View ->
@@ -66,8 +73,13 @@ class Displayeadapter(private val haltlist: ArrayList<Bookpark>) : RecyclerView.
 
                 listener.inItemclick(adapterPosition)
 
-
+                jh.paymove(adapterPosition)
             }
+
+
+
+
+
         }
     }
 }
