@@ -19,7 +19,7 @@
             android:layout_width="203dp"
             android:layout_height="53dp"
             android:backgroundTint="#E8D213"
-            android:text="Dashboard"
+            android:text="My Dashboard"
             android:textColor="#605B5B"
             android:textStyle="bold"
             app:cornerRadius="50dp"
