@@ -15,6 +15,8 @@
     </style>
 
     <!-- Dark mode -->
+    <!-- Dark mode option -->
+
     <style name="SCREEN">
         <item name="android:background">#232323</item>
     </style>
