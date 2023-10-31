@@ -47,12 +47,12 @@ class mainActivity2 : AppCompatActivity() {
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this ,"Your data deleted",Toast.LENGTH_LONG).show()
+            Toast.makeText(this ,"Your data deleted",Toast.LENGTH_LONG).show()//toast msg
             val intent = Intent(this, Newazctivety::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->
-            Toast.makeText(this ,"Deleting Err ${error.message}",Toast.LENGTH_LONG).show()
+            Toast.makeText(this ,"Deleting Err ${error.message}",Toast.LENGTH_LONG).show() // delete error msg
         }
     }
 
