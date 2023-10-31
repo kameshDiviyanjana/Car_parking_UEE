@@ -87,7 +87,7 @@ class mainActivity2 : AppCompatActivity() {
 
         mDialog.setView(mDialogView)
 
-        val etName = mDialogView.findViewById<EditText>(R.id.etName)
+        val etName = mDialogView.findViewById<EditText>(R.id.etName) //take attributes id's
         val etEmail = mDialogView.findViewById<EditText>(R.id.etEmail)
         val etPhone = mDialogView.findViewById<EditText>(R.id.etPhone)
         val etSubject = mDialogView.findViewById<EditText>(R.id.etSubject)
@@ -116,7 +116,7 @@ class mainActivity2 : AppCompatActivity() {
                 etMessage.text.toString()
             )
 
-            Toast.makeText(applicationContext,"Your Data Updated",Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,"Your Data Updated",Toast.LENGTH_LONG).show() //update value
 
             //we wre setting the updated data to our textviews
             tvNames.text= etName.text.toString()

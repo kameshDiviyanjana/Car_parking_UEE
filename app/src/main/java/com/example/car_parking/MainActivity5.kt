@@ -10,7 +10,7 @@ class mainActivity5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main5)
 
-        val NEXT = findViewById<Button>(R.id.cancelconfirm)
+        val NEXT = findViewById<Button>(R.id.cancelconfirm) //intent
         NEXT.setOnClickListener {
             val intent = Intent(this, mainActivity13::class.java) // image view as a button
             startActivity(intent)
