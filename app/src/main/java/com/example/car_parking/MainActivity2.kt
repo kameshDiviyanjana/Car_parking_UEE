@@ -58,7 +58,7 @@ class mainActivity2 : AppCompatActivity() {
 
 
     private fun initView() {
-        tvcusId=findViewById(R.id.tv_cusId)
+        tvcusId=findViewById(R.id.tv_cusId)//take values by id
         tvNames = findViewById(R.id.tv_Names)
         tvEmail = findViewById(R.id.tv_Email)
         tvPhone = findViewById(R.id.tv_Phone)
@@ -116,7 +116,7 @@ class mainActivity2 : AppCompatActivity() {
                 etMessage.text.toString()
             )
 
-            Toast.makeText(applicationContext,"Your Data Updated",Toast.LENGTH_LONG).show() //update value
+            Toast.makeText(applicationContext,"Your Data Updated",Toast.LENGTH_LONG).show() //update value toast msg
 
             //we wre setting the updated data to our textviews
             tvNames.text= etName.text.toString()
@@ -139,7 +139,7 @@ class mainActivity2 : AppCompatActivity() {
         subject:String,
         message:String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("Customers").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Customers").child(id) //db save
         val cusInfo = CustomerModel(id,name,email,phone,subject,message)
         dbRef.setValue(cusInfo)
     }
